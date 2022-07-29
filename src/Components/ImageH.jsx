@@ -11,7 +11,10 @@ export default function ImageView() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: 'spring', duration: 1, bounce: .3 }}>
             <img src={require(`../img/h.jpg`)} alt="" />
-            <button onClick={() => nav('/')}>back</button>
+            <motion.button onClick={() => nav('/')}
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ type: 'spring', duration: 1, bounce: .3, delay: .1 }}>back</motion.button>
         </motion.div>
     )
 }
