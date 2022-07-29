@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { setId } from '../redux/id'
 import { useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 export default function ImageCon() {
     const dispatch = useDispatch()
@@ -63,7 +64,10 @@ export default function ImageCon() {
 
     }
     return (
-        <div className="imageCon">
+        <motion.div className="imageCon"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: 'spring', duration: 1, bounce: .3 }}>
             <img src={require('../img/a.jpg')} alt="" onClick={a} />
             <img src={require('../img/b.jpg')} alt="" onClick={b} />
             <img src={require('../img/c.jpg')} alt="" onClick={c} />
@@ -73,6 +77,6 @@ export default function ImageCon() {
             <img src={require('../img/g.jpg')} alt="" onClick={g} />
             <img src={require('../img/h.jpg')} alt="" onClick={h} />
             <img src={require('../img/i.jpg')} alt="" onClick={i} />
-        </div>
+        </motion.div>
     )
 }
