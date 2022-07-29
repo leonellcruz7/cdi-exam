@@ -80,7 +80,7 @@ button {
   border-radius: 10px;
   border: none;
   outline: none;
-  background-color: rgb(133, 133, 133);
+  background-color: rgb(13, 146, 207);
   transition: .1s;
 }
 
@@ -111,4 +111,9 @@ img {
 
 .view img {
   width: 500px;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
 }
